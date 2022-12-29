@@ -19,11 +19,7 @@ jobs:
         run: |
           cd functions
           ls
-      - name: Google Auth
-        uses: google-github-actions/auth@v1
-        with:
-          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
       - name: Deploy to Firebase
         run: |
           cd functions
-          npx firebase-tools deploy --only functions --json
+          npm run deploy
