@@ -27,7 +27,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: list director
-        run: ls
+        run: |
+          cd functions
+          ls
       - name: Google Auth
         uses: google-github-actions/auth@v1
         with:
