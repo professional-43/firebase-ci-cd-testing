@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: list director
+        run: ls
       - name: Google Auth
         uses: google-github-actions/auth@v1
         with:
