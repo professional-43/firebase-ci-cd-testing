@@ -15,11 +15,8 @@ jobs:
         run: |
           cd functions
           npm install
-      - name: list director
-        run: |
-          cd functions
-          ls
       - name: Deploy to Firebase
         run: |
           cd functions
+          npm i firebase-tools
           npm run deploy
