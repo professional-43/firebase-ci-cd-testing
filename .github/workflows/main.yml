@@ -15,10 +15,6 @@ jobs:
         run: |
           cd functions
           npm install
-      - name: Google Auth
-        uses: google-github-actions/auth@v1
-        with:
-          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
       - name: Deploy to Firebase
         run: |
           cd functions
